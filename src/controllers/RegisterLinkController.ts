@@ -17,6 +17,7 @@ export default class RegisterLink {
     const linkExists = database.find((link) => {
       return link.identifier === identifier;
     });
+
     if (linkExists) {
       return res.status(400).json({
         message: "Link already exists",
